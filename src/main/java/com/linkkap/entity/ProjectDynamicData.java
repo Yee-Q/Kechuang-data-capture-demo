@@ -6,28 +6,28 @@ package com.linkkap.entity;
  */
 public class ProjectDynamicData {
 
-    private Integer id;
+    private Integer pid;
     private String stockAuditNum;
-    private String publisher;
+    private String stockAuditName;
     private String url;
 
     public ProjectDynamicData() {
 
     }
 
-    public ProjectDynamicData(Integer id, String stockAuditNum, String publisher, String url) {
-        this.id = id;
+    public ProjectDynamicData(Integer pid, String stockAuditNum, String stockAuditName, String url) {
+        this.pid = pid;
         this.stockAuditNum = stockAuditNum;
-        this.publisher = publisher;
+        this.stockAuditName = stockAuditName;
         this.url = url;
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getPid() {
+        return pid;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setPid(Integer pid) {
+        this.pid = pid;
     }
 
     public String getStockAuditNum() {
@@ -38,12 +38,12 @@ public class ProjectDynamicData {
         this.stockAuditNum = stockAuditNum;
     }
 
-    public String getPublisher() {
-        return publisher;
+    public String getStockAuditName() {
+        return stockAuditName;
     }
 
-    public void setPublisher(String publisher) {
-        this.publisher = publisher;
+    public void setStockAuditName(String stockAuditName) {
+        this.stockAuditName = stockAuditName;
     }
 
     public String getUrl() {
@@ -57,9 +57,9 @@ public class ProjectDynamicData {
     @Override
     public String toString() {
         return "LinkTypeData{" +
-                "id=" + id +
+                "id=" + pid +
                 ", stockAuditNum='" + stockAuditNum + '\'' +
-                ", publisher='" + publisher + '\'' +
+                ", publisher='" + stockAuditName + '\'' +
                 ", url='" + url + '\'' +
                 '}';
     }

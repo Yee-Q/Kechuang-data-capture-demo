@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.linkkap.dao.CrackerDao">
+
+    <insert id="createFileData" parameterType="list">
+        INSERT INTO file_data(fid, stock_audit_name, prospectus_url, report_url) VALUES
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+                #{item.fid},
+                #{item.stockAuditName},
+                #{item.prospectusUrl},
+                #{item.reportUrl}
+            )
+        </foreach>
+    </insert>
+
+    <insert id="createProjectDynamicData" parameterType="list">
+        INSERT INTO project_dynamic(pid, stock_audit_num, stock_audit_name, url) VALUES
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+                #{item.pid},
+                #{item.stockAuditNum},
+                #{item.stockAuditName},
+                #{item.url}
+            )
+        </foreach>
+    </insert>
+
+    <select id="selectProjectDynamicData" resultType="ProjectDynamicData">
+        SELECT * FROM project_dynamic
+    </select>
+
+    <select id="selectFileData" resultType="FileData">
+        SELECT * FROM file_data
+    </select>
+
+    <delete id="deleteAllFileData">
+        DELETE FROM file_data
+    </delete>
+
+    <delete id="deleteAllProjectDynamicData">
+        DELETE FROM project_dynamic
+    </delete>
+
+</mapper>

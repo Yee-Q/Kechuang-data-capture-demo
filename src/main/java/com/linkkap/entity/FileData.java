@@ -6,8 +6,8 @@ package com.linkkap.entity;
  */
 public class FileData {
 
-    private Integer id;
-    private String publisher;
+    private Integer fid;
+    private String stockAuditName;
     private String prospectusUrl;
     private String reportUrl;
 
@@ -15,27 +15,27 @@ public class FileData {
 
     }
 
-    public FileData(Integer id, String publisher, String prospectusUrl, String reportUrl) {
-        this.id = id;
-        this.publisher = publisher;
+    public FileData(Integer fid, String stockAuditName, String prospectusUrl, String reportUrl) {
+        this.fid = fid;
+        this.stockAuditName = stockAuditName;
         this.prospectusUrl = prospectusUrl;
         this.reportUrl = reportUrl;
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getFid() {
+        return fid;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setFid(Integer fid) {
+        this.fid = fid;
     }
 
-    public String getPublisher() {
-        return publisher;
+    public String getStockAuditName() {
+        return stockAuditName;
     }
 
-    public void setPublisher(String publisher) {
-        this.publisher = publisher;
+    public void setStockAuditName(String stockAuditName) {
+        this.stockAuditName = stockAuditName;
     }
 
     public String getProspectusUrl() {
@@ -57,8 +57,8 @@ public class FileData {
     @Override
     public String toString() {
         return "FileData{" +
-                "id='" + id + '\'' +
-                ", publisher='" + publisher + '\'' +
+                "id='" + fid + '\'' +
+                ", publisher='" + stockAuditName + '\'' +
                 ", prospectusUrl='" + prospectusUrl + '\'' +
                 ", reportUrl='" + reportUrl + '\'' +
                 '}';

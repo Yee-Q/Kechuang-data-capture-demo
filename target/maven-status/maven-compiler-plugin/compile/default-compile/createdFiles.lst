@@ -1,3 +1,6 @@
 com\linkkap\entity\FileData.class
-com\linkkap\Cracker.class
+com\linkkap\runner\AppRunner.class
+com\linkkap\dao\CrackerDao.class
 com\linkkap\entity\ProjectDynamicData.class
+com\linkkap\App.class
+com\linkkap\service\CrackerSev.class
